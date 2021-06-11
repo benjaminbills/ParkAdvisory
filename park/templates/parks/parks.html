@@ -1,0 +1,51 @@
+{%extends 'base.html'%}
+{% load static%}
+
+{% block styles %}
+{% endblock  %}
+
+{% block content %}
+<section id="explore" class="d-flex align-items-center">
+      <div class="container text-center">
+        <form method="get">
+          <div class="input-group mb-3">
+            {{myFilter.form}}
+          <button class="btn btn-outline-secondary" type="submit" >Search</button>
+          </div>
+        </form>
+        <div class="row m-2">
+          {% for park in parks %}
+          <div class="col-md-6 p-3">
+            <div class="card">
+              <img class="card-img-top" src="{{park.images.url}}" alt="Winter Photo">
+              <div class="card-body">
+                <h2 class="card-title text-success">{{park.name}}</h2>
+                <p class="card-text">{{park.description}}</p>
+                <a href="#explore" class="btn btn-outline-success btn-lg">Read more</a>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+
+{% endblock %}
+
+
+{% block script %}
+<script>
+  var form_fields = document.getElementsByTagName('input')
+  var form_select = document.getElementsByTagName('select')
+  var label_name = document.getElementsByTagName('label')
+  for (var field in form_fields){	
+			form_fields[field].className += ' form-control'
+		}
+  for (var field in form_select){	
+			form_select[field].className += ' form-select'
+	}
+  for (var field in form_select){	
+			label_name[field].className += ' form-control'
+	}
+</script>
+{% endblock  %}

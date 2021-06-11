@@ -5,7 +5,31 @@
 {% endblock  %}
 
 {% block content %}
-<h1>Working</h1>
+<div class="legend">
+  <div class="container text-center">
+    <h3>Enjoy nature and outdoor activities</h3>
+  </div>
+</div>
+
+<section id="explore" class="d-flex align-items-center">
+      <div class="container text-center">
+        <h2 class="mb-5 mb-lg-3">Get Details about Parks around you.</h2>
+        <div class="row m-2">
+          {% for park in parks %}
+          <div class="col-md-6 p-3">
+            <div class="card">
+              <img class="card-img-top" src="{{park.images.url}}" alt="Winter Photo">
+              <div class="card-body">
+                <h2 class="card-title text-success">{{park.name}}</h2>
+                <p class="card-text">{{park.description}}</p>
+                <a href="#explore" class="btn btn-outline-success btn-lg">Read more</a>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
 
 {% endblock %}
 

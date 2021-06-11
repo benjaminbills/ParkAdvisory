@@ -1,0 +1,33 @@
+.legend {
+  background: url('https://images.unsplash.com/photo-1561133211-6067fc8e7348?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1945&q=80') bottom center/cover no-repeat; 
+}
+
+.legend .container {
+  padding: 20% 20% 20% 20%;
+  color: #fff;
+}
+
+#explore {
+  padding-top: 8rem; }
+  @media (max-width: 799.98px) {
+    #explore {
+      padding-top: 5rem; } }
+  #explore h2 {
+    text-transform: uppercase; }
+
+@media screen and (max-width:2000px) and (min-width: 986px) {
+  .legend {
+    height: 600px;
+  }
+}
+@media screen and (max-width:985px) and (min-width: 501px){
+  .legend {
+    height: 400px;
+  }
+}
+
+@media screen and (max-width:500px){
+  .legend {
+    height: 300px;
+  }
+}
